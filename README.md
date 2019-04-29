@@ -1,26 +1,34 @@
 # ThriftByExample
-Thrift by Example in details
-
-This example is taken from https://thrift-tutorial.readthedocs.io/en/latest/usage-example.html
-
-To compile:
-mvn clean compile
-
-To run the server: 
-mvn exec:java -Dexec.mainClass="tutorial.MultiplicationServer"
-
-In another tab to run the client:
-mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"
-(You should see the result 3*5=15)
-
-
+Thrift by Example in details<br/>
+<br/>
+This example is taken from https://thrift-tutorial.readthedocs.io/en/latest/usage-example.html<br/>
+<br/>
+To compile:<br/>
+```
+mvn clean compile<br/>
+```
+<br/>
+To run the server: <br/>
+```
+mvn exec:java -Dexec.mainClass="tutorial.MultiplicationServer"<br/>
+```
+<br/>
+In another tab to run the client:<br/>
+```
+mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"<br/>
+```
+(You should see the result 3*5=15)<br/>
+<br/>
+<br/>
 ==================================================<br/>
-More details to how to create files manually, generate pom file, etc. 
-
-mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
-
-modify pom file:
-- add following dependency:
+More details to how to create files manually, generate pom file, etc. <br/>
+<br/>
+```
+mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false<br/>
+```
+<br/>
+modify pom file:<br/>
+- add following dependency:<br/>
 ```
 <dependency>
   <groupId>org.apache.thrift</groupId>
