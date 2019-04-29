@@ -21,13 +21,15 @@ mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo -DarchetypeArt
 
 modify pom file:
 - add following dependency:
+```
 <dependency>
   <groupId>org.apache.thrift</groupId>
   <artifactId>libthrift</artifactId>
   <version>0.12.0</version>
 </dependency>
-
+```
 - Add the maven-thrift-plugin and maven-compiler-plugin in the build section:
+```
           <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -63,3 +65,4 @@ modify pom file:
                 </executions>
             </plugin>
         </plugins>
+```
