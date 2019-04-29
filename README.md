@@ -52,7 +52,7 @@ modify pom file:<br/>
                 <version>0.1.11</version>
                 <configuration>
                     <thriftExecutable>/usr/local/bin/thrift</thriftExecutable>
-<generator>java</generator>
+                    <generator>java</generator>
                 </configuration>
                 <executions>
                     <execution>
