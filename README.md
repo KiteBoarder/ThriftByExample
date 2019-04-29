@@ -5,17 +5,17 @@ This example is taken from https://thrift-tutorial.readthedocs.io/en/latest/usag
 <br/>
 To compile:<br/>
 ```
-mvn clean compile<br/>
+mvn clean compile
 ```
 <br/>
 To run the server: <br/>
 ```
-mvn exec:java -Dexec.mainClass="tutorial.MultiplicationServer"<br/>
+mvn exec:java -Dexec.mainClass="tutorial.MultiplicationServer"
 ```
 <br/>
 In another tab to run the client:<br/>
 ```
-mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"<br/>
+mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"
 ```
 (You should see the result 3*5=15)<br/>
 <br/>
