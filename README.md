@@ -7,7 +7,7 @@ To compile:
 ```
 mvn clean compile
 ```
-<br/>
+
 To run the server:
 ```
 mvn exec:java -Dexec.mainClass
