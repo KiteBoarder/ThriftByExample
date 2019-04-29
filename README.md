@@ -25,9 +25,9 @@ More details to how to create files manually, generate pom file, etc.
 ```
 mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false<br/>
 ```
-<br/>
+
 modify pom file:<br/>
-- add following dependency:<br/>
+- add following dependency:
 ```
 <dependency>
   <groupId>org.apache.thrift</groupId>
