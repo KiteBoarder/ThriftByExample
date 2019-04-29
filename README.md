@@ -3,7 +3,7 @@ Thrift by Example in details<br/>
 <br/>
 This example is taken from https://thrift-tutorial.readthedocs.io/en/latest/usage-example.html<br/>
 <br/>
-To compile:<br/>
+To compile:
 ```
 mvn clean compile
 ```
