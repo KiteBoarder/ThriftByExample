@@ -75,5 +75,116 @@ modify pom file:<br/>
             </plugin>
         </plugins>
 ```
+create a folder under src/main called thrift. <br/>
+create a file named multiple.thrift in src/main/thrift: 
+```
+namespace java tutorial
+namespace py tutorial
 
-create a file 
+typedef i32 int // We can use typedef to get pretty names for the types we are using
+service MultiplicationService
+{
+        int multiply(1:int n1, 2:int n2),
+}
+```
+
+create these 3 files in src/main/java:<br/>
+Note: You need to add package tutorial to all 3 files, to be in the same package as the thrift generated java files. <br/>
+MultiplicationHandler.java:
+```
+
+package tutorial;
+import org.apache.thrift.TException;
+
+public class MultiplicationHandler implements MultiplicationService.Iface {
+
+	@Override
+	 public int multiply(int n1, int n2) throws TException {
+	    System.out.println("Multiply(" + n1 + "," + n2 + ")");
+	    return n1 * n2;
+	 }
+}
+```
+MultiplicationServer.java:
+```
+package tutorial;
+import org.apache.thrift.server.TServer;
+import org.apache.thrift.server.TServer.Args;
+import org.apache.thrift.server.TSimpleServer;
+import org.apache.thrift.transport.TServerSocket;
+import org.apache.thrift.transport.TServerTransport;
+
+public class MultiplicationServer {
+
+  public static MultiplicationHandler handler;
+
+  public static MultiplicationService.Processor processor;
+
+  public static void main(String [] args) {
+    try {
+      handler = new MultiplicationHandler();
+      processor = new MultiplicationService.Processor(handler);
+
+      Runnable simple = new Runnable() {
+        public void run() {
+          simple(processor);
+        }
+      };      
+     
+      new Thread(simple).start();
+    } catch (Exception x) {
+      x.printStackTrace();
+    }
+  }
+
+  public static void simple(MultiplicationService.Processor processor) {
+    try {
+      TServerTransport serverTransport = new TServerSocket(9090);
+      TServer server = new TSimpleServer(new Args(serverTransport).processor(processor));
+
+      System.out.println("Starting the simple server...");
+      server.serve();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+ 
+}
+```
+MultiplicationClient.java:
+```
+import org.apache.thrift.TException;
+import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.protocol.TProtocol;
+import org.apache.thrift.transport.TSocket;
+import org.apache.thrift.transport.TTransport;
+
+public class MultiplicationClient {
+  public static void main(String [] args) {
+
+   
+    try {
+      TTransport transport;
+     
+      transport = new TSocket("localhost", 9090);
+      transport.open();
+
+      TProtocol protocol = new  TBinaryProtocol(transport);
+      MultiplicationService.Client client = new MultiplicationService.Client(protocol);
+
+      perform(client);
+
+      transport.close();
+    } catch (TException x) {
+      x.printStackTrace();
+    } 
+  }
+
+  private static void perform(MultiplicationService.Client client) throws TException
+  {
+   
+    int product = client.multiply(3,5);
+    System.out.println("3*5=" + product);
+  }
+}
+```
