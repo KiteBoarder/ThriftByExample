@@ -12,11 +12,8 @@ To run the server:
 ```
 mvn exec:java -Dexec.mainClass
 ```
-<br/>
-In another tab to run the client:
-```
-mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"
-```
+In another tab run the client:
+```mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"```
 (You should see the result 3*5=15)<br/>
 <br/>
 <br/>
