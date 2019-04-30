@@ -3,6 +3,10 @@ Thrift by Example explained in details.<br/>
 <br/>
 This original example is here: https://thrift-tutorial.readthedocs.io/en/latest/usage-example.html<br/>
 <br/>
+Install thrift locally. On mac:
+```brew install thrift ```
+make sure the thrift version is 0.12.0 or more. 
+
 To compile:
 ```
 mvn clean compile
