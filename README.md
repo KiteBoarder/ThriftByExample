@@ -88,8 +88,8 @@ service MultiplicationService
 }
 ```
 
-create these 3 files in src/main/java:<br/>
-Note: You need to add package tutorial to all 3 files, to be in the same package as the thrift generated java files. <br/>
+Create these 3 files in src/main/java:<br/>
+Note: You need to add package tutorial to all 3 files, to be in the same package as the thrift generated java files. <br/><br/>
 MultiplicationHandler.java:
 ```
 
