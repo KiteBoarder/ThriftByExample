@@ -1,7 +1,7 @@
 # ThriftByExample
-Thrift by Example in details<br/>
+Thrift by Example explained in details.<br/>
 <br/>
-This example is taken from https://thrift-tutorial.readthedocs.io/en/latest/usage-example.html<br/>
+This original example is here: https://thrift-tutorial.readthedocs.io/en/latest/usage-example.html<br/>
 <br/>
 To compile:
 ```
