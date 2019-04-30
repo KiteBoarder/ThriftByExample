@@ -20,7 +20,9 @@ In another tab run the client:
 ==================================================<br/>
 More details to how to create files manually, generate pom file, etc.
 ```
-mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false<br/>
+mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo 
+-DarchetypeArtifactId=maven-archetype-quickstart 
+-DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
 modify pom file:<br/>
