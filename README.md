@@ -3,6 +3,9 @@ Thrift by Example explained in details.<br/>
 <br/>
 This original example is here: https://thrift-tutorial.readthedocs.io/en/latest/usage-example.html<br/>
 <br/>
+This tutorial is divided into two parts. The first part is to clone this repo, compile and run the examnple. The 2nd part is starting from scratch. 
+
+# Part1: Clone this repo and run the example (easy way). 
 Install thrift locally. On mac:
 ```
 brew install thrift 
@@ -26,7 +29,7 @@ mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"
 <br/>
 <br/>
 ==================================================<br/>
-# Manual steps 
+# Part 2: From scratch
 Details how to how to create this project manually, generate pom file, etc (ie not using git clone to copy this repository).
 ```
 mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo \
