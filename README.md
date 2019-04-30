@@ -39,7 +39,7 @@ modify pom file:<br/>
 ```
 - Add the maven-thrift-plugin and maven-compiler-plugin in the build section:
 ```
-          <plugins>
+        <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
