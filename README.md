@@ -20,7 +20,8 @@ mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"
 <br/>
 <br/>
 ==================================================<br/>
-More details to how to create files manually, generate pom file, etc.
+# Manual steps 
+Details how to how to create this project manually, generate pom file, etc (ie not using git clone to copy this repository).
 ```
 mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo \
 -DarchetypeArtifactId=maven-archetype-quickstart \
@@ -74,3 +75,5 @@ modify pom file:<br/>
             </plugin>
         </plugins>
 ```
+
+create a file 
