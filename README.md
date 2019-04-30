@@ -13,15 +13,17 @@ To run the server:
 mvn exec:java -Dexec.mainClass
 ```
 In another tab run the client:
-```mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"```
+```
+mvn exec:java -Dexec.mainClass="tutorial.MultiplicationClient"
+```
 (You should see the result 3*5=15)<br/>
 <br/>
 <br/>
 ==================================================<br/>
 More details to how to create files manually, generate pom file, etc.
 ```
-mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo 
--DarchetypeArtifactId=maven-archetype-quickstart 
+mvn archetype:generate -DgroupId=tutorial -DartifactId=thriftDemo \
+-DarchetypeArtifactId=maven-archetype-quickstart \
 -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
