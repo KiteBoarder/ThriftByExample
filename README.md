@@ -5,7 +5,7 @@ This original example is here: https://thrift-tutorial.readthedocs.io/en/latest/
 <br/>
 This tutorial is divided into two parts. The first part is to clone this repo, compile and run the examnple. The 2nd part is starting from scratch. 
 
-# Part1: Clone this repo and run the example (easy way). 
+# Part1: Clone this repo and run the example (easy way)
 Install thrift locally. On mac:
 ```
 brew install thrift 
