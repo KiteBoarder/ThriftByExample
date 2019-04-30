@@ -7,7 +7,7 @@ Install thrift locally. On mac:
 ```
 brew install thrift 
 ```
-make sure the thrift version is 0.12.0 or more. 
+make sure the thrift version is 0.12.0 or more. ```thrift --version```
 
 To compile:
 ```
