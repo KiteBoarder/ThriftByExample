@@ -10,7 +10,7 @@ mvn clean compile
 
 To run the server:
 ```
-mvn exec:java -Dexec.mainClass
+mvn exec:java -Dexec.mainClass="tutorial.MultiplicationServer"
 ```
 In another tab run the client:
 ```
