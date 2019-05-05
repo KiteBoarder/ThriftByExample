@@ -189,11 +189,11 @@ public class MultiplicationClient {
   }
 }
 ```
-# run with java (instead of maven exec)
+# Run with java (instead of maven exec)
 You need to create a fat jar (including all dependencies, in this case thrift). 
 Add the following plugin to the pom file: 
 ```
-<plugin>
+      <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
           <execution>
@@ -210,7 +210,7 @@ Add the following plugin to the pom file:
         </configuration>
       </plugin>
 ```
-Then run ```mvn clean install```
-There should be a jar file called ```./target/thriftDemo-1.0-SNAPSHOT-jar-with-dependencies.jar```
-Then run the server like this: ```java -cp ./target/thriftDemo-1.0-SNAPSHOT-jar-with-dependencies.jar tutorial.MultiplicationServer```
+Then run ```mvn clean install```<br/>
+There should be a jar file called ```./target/thriftDemo-1.0-SNAPSHOT-jar-with-dependencies.jar```<br/>
+Then run the server like this: ```java -cp ./target/thriftDemo-1.0-SNAPSHOT-jar-with-dependencies.jar tutorial.MultiplicationServer```<br/>
 And in another tab run the client: ```java -cp ./target/thriftDemo-1.0-SNAPSHOT-jar-with-dependencies.jar tutorial.MultiplicationClient```
